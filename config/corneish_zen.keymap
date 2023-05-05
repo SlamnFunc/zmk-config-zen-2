@@ -48,13 +48,13 @@
                         label = "NUMBER";
 // ---------------------------------------------------------------------------------------------------------
 // |   TAB  |SCRSHOT|KC_CMLB|  UP   |KC_CMRB| PG_UP |     |   =   |   7   |   8   |   9   |   0   |  BKSP  |
-// |  BTCLR |KC_LSFT| LEFT  |  DOWN | RIGHT | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
+// | CT_GRV |KC_LSFT| LEFT  |  DOWN | RIGHT | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
 // |  SHFT  | FORCE |  F11  |  F12  |  SPC  | BKSP  |     |   x   |   1   |   2   |   3   |   /   |        |
 //                          |  NUM  |  GUI  | SHFT  |     |   0   |       |       |
                         bindings = <
-   &kp TAB    &kp LG(LS(N4))         &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp PG_UP      &KP_ENTER       &kp N7   &kp N8   &kp N9    &kp N0        &kp BSPC
-   &bt BT_CLR &kp LSHFT              &mt LCTRL LEFT &mt LALT DOWN &mt LGUI RIGHT &kp PG_DN      &kp KP_PLUS     &kp N4   &kp N5   &kp N6    &kp KP_MINUS  &trans
-   &kp LSHFT  &kp LALT(LGUI(KC_ESC)) &trans         &trans        &kp SPACE      &kp BSPC       &KP KP_MULTIPLY &kp N1   &kp N2   &kp N3    &kp KP_DIVIDE &trans
+   &kp TAB         &kp LG(LS(N4))         &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp PG_UP      &KP_ENTER       &kp N7   &kp N8   &kp N9    &kp N0        &kp BSPC
+   &mt LCTRL GRAVE &kp LSHFT              &mt LCTRL LEFT &mt LALT DOWN &mt LGUI RIGHT &kp PG_DN      &kp KP_PLUS     &kp N4   &kp N5   &kp N6    &kp KP_MINUS  &trans
+   &kp LSHFT       &kp LALT(LGUI(KC_ESC)) &trans         &trans        &kp SPACE      &kp BSPC       &KP KP_MULTIPLY &kp N1   &kp N2   &kp N3    &kp KP_DIVIDE &trans
                                                     &trans        &trans         &trans         &kp N0          &trans   &trans
                         >;
                 };
