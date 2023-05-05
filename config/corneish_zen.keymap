@@ -46,15 +46,15 @@
                 lower_layer {
                         label = "NUMBER";
 // ---------------------------------------------------------------------------------------------------------
-// |   TAB  |SCRSHOT|KC_CMLB|  UP   |KC_CMRB| PG_UP |     |   =   |   7   |   8   |   9   |   0   |  BKSP  |
-// | CT_GRV |KC_LSFT| LEFT  |  DOWN | RIGHT | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
-// |  SHFT  | FORCE |  F11  |  F12  |  SPC  | BKSP  |     |   x   |   1   |   2   |   3   |   /   |        |
+// |   TAB  |SCRSHOT|GUILBKT|  UP   |GUIRBKT| PG_UP |     |   =   |   7   |   8   |   9   |   0   |  BKSP  |
+// | CT_GRV | SHIFT | LEFT  |  DOWN | RIGHT | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
+// |  SHIFT | FORCE |       |       |  SPC  | BKSP  |     |   x   |   1   |   2   |   3   |   /   |        |
 //                          |  NUM  |  GUI  | SHFT  |     |   0   |       |       |
                         bindings = <
-   &kp TAB         &kp LG(LS(N4))  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp PG_UP      &kp ENTER &kp N7  &kp N8  &kp N9  &kp N0    &kp BSPC
+   &kp TAB         &kp LG(LS(N4))  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp PG_UP      &kp RET   &kp N7  &kp N8  &kp N9  &kp N0    &trans
    &mt LCTRL GRAVE &kp LSHFT       &mt LCTRL LEFT &mt LALT DOWN &mt LGUI RIGHT &kp PG_DN      &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS &trans
    &kp LSHFT       &kp LA(LG(ESC)) &trans         &trans        &kp SPACE      &kp BSPC       &KP STAR  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
-                                                  &trans        &trans         &trans         &kp N0          &trans  &trans
+                                                  &trans        &trans         &trans         &kp N0    &trans  &trans
                         >;
                 };
                 raise_layer {
