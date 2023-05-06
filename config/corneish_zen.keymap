@@ -26,7 +26,7 @@
     layers = <0>; \
 };
 
- combos / {
+/{ combos {
   compatible = "zmk,combos";
   
   COMBO(ret1,  &kp RET,   31 32)
@@ -56,7 +56,8 @@
   COMBO(nine,  &kp N9,  9 21)
   COMBO(zero,  &kp N0, 10 22)
   COMBO(equal, &kp N9, 17 29)
-  COMBO(minus, &kp N0, 18 30)  
+  COMBO(minus, &kp N0, 18 30)
+  };
 };
 
 / {
