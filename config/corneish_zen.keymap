@@ -8,6 +8,57 @@
 #define SYMBOLS  3     // Symbols
 #define ARROWS   4     // Arrows and navigation Layer under the space key
 
+/*                KEY POSITIONS
+
+  ╭────────────────────────╮ ╭────────────────────────╮
+  │ 0   1   2   3   4   5  │ │ 6   7   8   9   10  11 │
+  │ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
+  │ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
+  ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
+              ╰────────────╯ ╰────────────╯ */
+
+
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <50>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <0>; \
+};
+
+combos {
+  compatible = "zmk,combos";
+  
+  COMBO(ret1,  &kp RET,   31 32)
+  COMBO(ret2,  &kp RET,   27 28)
+  COMBO(ent1,  &kp RET,   30 31)
+  COMBO(ent2,  &kp RET,   28 29)
+  COMBO(esc,   &kp ESC,   25 26)
+  COMBO(bspc,  &kp BSPC,   9 10)
+  COMBO(del,   &kp DEL,   19 20)
+  COMBO(tab,   &kp TAB,   15 16)
+  COMBO(grv,   &kp GRAVE, 16 17) //Grave hold shift for Tilde
+  COMBO(sqt,   &kp SQT,   32 33) //Single quote Hold shift for Double quote
+  COMBO(bslh,  &kp BSLH,  33 34) //Backslash Hold shift for Pipe
+  COMBO(bsp2,  &kp BSPC,   2  4)
+  
+  COMBO(rightbraket, &kp LBKT, 4 5) // ]
+  COMBO(leftbracket, &kp RBKT, 6 7) // [ 
+  
+  COMBO(one,   &kp N1,  1 13)
+  COMBO(two,   &kp N2,  2 14)
+  COMBO(three, &kp N3,  3 15)
+  COMBO(four,  &kp N4,  4 16)
+  COMBO(five,  &kp N5,  5 17)
+  COMBO(six,   &kp N6,  6 18)
+  COMBO(seven, &kp N7,  7 19)
+  COMBO(eight, &kp N8,  8 20)
+  COMBO(nine,  &kp N9,  9 21)
+  COMBO(zero,  &kp N0, 10 22)
+  COMBO(equal, &kp N9, 17 29)
+  COMBO(minus, &kp N0, 18 30)  
+};
+
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
