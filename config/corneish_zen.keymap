@@ -26,7 +26,7 @@
     layers = <0>; \
 };
 
-/ combos {
+ combos / {
   compatible = "zmk,combos";
   
   COMBO(ret1,  &kp RET,   31 32)
