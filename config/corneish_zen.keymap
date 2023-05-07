@@ -34,8 +34,8 @@
   COMBO(ent1,  &kp RET,   30 31)
   COMBO(ent2,  &kp RET,   28 29)
   COMBO(esc,   &kp ESC,   25 26)
-  COMBO(bspc,  &kp BSPC,   9 10)
-  COMBO(del,   &kp DEL,   19 20)
+  COMBO(bspc,  &kp BSPC,  19 20) 
+  COMBO(del,   &kp DEL,    9 10)  
   COMBO(tab,   &kp TAB,   15 16)
   COMBO(grv,   &kp GRAVE, 16 17) //Grave hold shift for Tilde
   COMBO(sqt,   &kp SQT,   32 33) //Single quote Hold shift for Double quote
@@ -45,18 +45,18 @@
   COMBO(rightbraket, &kp LBKT, 4 5) // ]
   COMBO(leftbracket, &kp RBKT, 6 7) // [ 
   
-  COMBO(one,   &kp N1,  1 13)
-  COMBO(two,   &kp N2,  2 14)
-  COMBO(three, &kp N3,  3 15)
-  COMBO(four,  &kp N4,  4 16)
-  COMBO(five,  &kp N5,  5 17)
-  COMBO(six,   &kp N6,  6 18)
-  COMBO(seven, &kp N7,  7 19)
-  COMBO(eight, &kp N8,  8 20)
-  COMBO(nine,  &kp N9,  9 21)
-  COMBO(zero,  &kp N0, 10 22)
-  COMBO(equal, &kp N9, 17 29)
-  COMBO(minus, &kp N0, 18 30)
+  COMBO(one,   &kp N1,     1 13)
+  COMBO(two,   &kp N2,     2 14)
+  COMBO(three, &kp N3,     3 15)
+  COMBO(four,  &kp N4,     4 16)
+  COMBO(five,  &kp N5,     5 17)
+  COMBO(six,   &kp N6,     6 18)
+  COMBO(seven, &kp N7,     7 19)
+  COMBO(eight, &kp N8,     8 20)
+  COMBO(nine,  &kp N9,     9 21)
+  COMBO(zero,  &kp N0,    10 22)
+  COMBO(equal, &kp EQUAL, 17 29)
+  COMBO(minus, &kp MINUS, 18 30)
   };
 };
 
@@ -65,6 +65,10 @@
     zmk,matrix_transform = &default_transform;
     //zmk,matrix_transform = &five_column_transform;
   };
+};
+
+&mt {
+    tapping-term-ms = <220>;
 };
 
 / {
@@ -135,9 +139,9 @@
 // |  BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     | KCMUTE| KC_SPC| KC_ENT| QWERTY|COLEMAK|        |
 //                          |       |       |       |     |       |       |       |
                         bindings = <
- &trans     &bt BT_CLR   &trans       &kp SLCK     &kp PAUSE_BREAK &kp C_BRI_UP    &kp C_VOL_UP &kp HOME  &kp UP    &kp PG_UP &kp PG_UP &trans
- &trans     &kp LSHFT    &kp LCTRL    &kp LALT     &kp LGUI        &kp C_BRI_DN    &kp C_VOL_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp PG_DN &trans
- &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4    &kp K_MUTE   &kp SPACE &kp RET   &trans    &trans    &trans
+ &trans     &bt BT_CLR   &trans       &kp SLCK     &kp PAUSE_BREAK &kp C_BRI_UP    &kp C_VOL_UP &kp HOME  &kp UP    &kp PG_UP   &kp PG_UP    &trans
+ &trans     &kp LSHFT    &kp LCTRL    &kp LALT     &kp LGUI        &kp C_BRI_DN    &kp C_VOL_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp PG_DN    &trans
+ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4    &kp K_MUTE   &kp SPACE &kp RET   &tog QWERTY &tog COLEMAK &trans
                                         &trans       &trans          &trans          &trans       &trans    &trans
                         >;
                 };
