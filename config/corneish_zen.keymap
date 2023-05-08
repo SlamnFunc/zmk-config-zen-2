@@ -9,7 +9,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <50>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -95,9 +95,9 @@ combos {
 //                          |  NUM  |  GUI  | SHFT  |     |ArrSPC | BKSP   |  SYM  |
                         bindings = <
  &kp TAB         &kp Q        &kp W       &kp E      &kp R          &kp T        &kp Y       &kp U         &kp I      &kp O       &kp P          &kp BSPC
- &mt LCTRL GRAVE &mt LSHIFT A &mt LCTRL S &mt LALT D &mt LGUI F     &lt 3 G      &kp H       &mt RGUI J    &mt RALT K &mt RCTRL L &mt RSHFT SEMI &kp SQT
+ &hm LCTRL GRAVE &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F     &lt 3 G      &kp H       &hm RGUI J    &hm RALT K &hm RCTRL L &hm RSHFT SEMI &kp SQT
  &kp LSHFT       &kp Z        &kp X       &kp C      &kp V          &kp B        &kp N       &kp M         &kp COMMA  &kp DOT     &kp FSLH       &kp ESC
-                                          &lt 2 TAB  &mt LGUI GRAVE &sk LSHIFT   &lt 4 SPACE &mt RGUI BSPC &lt 3 SQT
+                                          &lt 2 TAB  &hm LGUI GRAVE &sk LSHIFT   &lt 4 SPACE &hm RGUI BSPC &lt 3 SQT
                         >;
                 };
                 colemak_layer {
@@ -108,10 +108,10 @@ combos {
 // |  SHFT  |   Z   |   X   |   C   |   D   |   V   |     |   K   |   H    |   ,   |   .   |   /   |  ESC   |
 //                          |  NUM  |  GUI  | SHFT  |     |ArrSPC |  BKSP  | SYM ' |
                         bindings = <
- &kp TAB         &kp Q         &kp W       &kp F      &kp P          &kp B        &kp J       &kp L         &kp U      &kp Y       &kp SEMI  &kp BSPC
- &mt LCTRL GRAVE &mt LSHIFT A  &mt LCTRL R &mt LALT S &mt LGUI T     &lt 3 G      &kp M       &mt RGUI N    &mt RALT E &mt RCTRL I &kp O     &kp SQT
- &kp LSHFT       &kp Z         &kp X       &kp C      &kp V          &kp B        &kp N       &kp M         &kp COMMA  &kp DOT     &kp FSLH  &kp ESC
-                                           &lt 2 TAB  &mt LGUI GRAVE &sk LSHIFT   &lt 4 SPACE &mt RGUI BSPC &lt 3 SQT
+ &kp TAB         &kp Q         &kp W       &kp F      &kp P          &kp B        &kp J       &kp L         &kp U      &kp Y       &kp SEMI      &kp BSPC
+ &hm LCTRL GRAVE &hm LSHIFT A  &hm LCTRL R &hm LALT S &hm LGUI T     &lt 3 G      &kp M       &hm RGUI N    &hm RALT E &hm RCTRL I &hm RSHFT  O  &kp SQT
+ &kp LSHFT       &kp Z         &kp X       &kp C      &kp V          &kp B        &kp N       &kp M         &kp COMMA  &kp DOT     &kp FSLH      &kp ESC
+                                           &lt 2 TAB  &hm LGUI GRAVE &sk LSHIFT   &lt 4 SPACE &hm RGUI BSPC &lt 3 SQT
                         >;
                 };
                 lower_layer {
