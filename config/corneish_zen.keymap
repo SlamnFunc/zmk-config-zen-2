@@ -47,7 +47,7 @@ combos {
   COMBO(ent1,  &kp RET,   30 31)
   COMBO(ent2,  &kp RET,   28 29)
   COMBO(esc,   &kp ESC,   25 26)
-  COMBO(bspc,  &kp BSPC,  19 20) 
+  COMBO(bspc,  &kp BSPC,  18 19) 
   COMBO(del,   &kp DEL,    9 10)  
   COMBO(tab,   &kp TAB,    3 16)
   COMBO(grv,   &kp GRAVE, 16 17) //Grave hold shift for Tilde
