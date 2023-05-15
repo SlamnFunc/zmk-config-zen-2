@@ -49,7 +49,7 @@ combos {
   COMBO(esc,   &kp ESC,   25 26)
   COMBO(bspc,  &kp BSPC,  19 20) 
   COMBO(del,   &kp DEL,    9 10)  
-  COMBO(tab,   &kp TAB,   15 16)
+  COMBO(tab,   &kp TAB,    3 16)
   COMBO(grv,   &kp GRAVE, 16 17) //Grave hold shift for Tilde
   COMBO(sqt,   &kp SQT,   32 33) //Single quote Hold shift for Double quote
   COMBO(bslh,  &kp BSLH,  33 34) //Backslash Hold shift for Pipe
