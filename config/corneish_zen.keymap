@@ -20,6 +20,7 @@
 #define NUMBERS  2     // Number pad layer
 #define SYMBOLS  3     // Symbols
 #define ARROWS   4     // Arrows and navigation Layer under the space key
+#define BLUTOTH  5     // Bluetooth reset button on it's own layer to avoid stupid errors from muscle spasms
 
 /*                KEY POSITIONS
 
@@ -92,7 +93,7 @@ combos {
 // |   TAB  |   Q   |   W   |   E   |   R   |   T   |     |   Y   |   U    |   I   |   O   |   P   |  BKSP  |
 // | CT_GRV | SHF_A | CTL_S | ALT_D | COM_F | SYM_G |     |   H   | COM_J  | ALT_K | CTL_L | SH_SC |   '    |
 // |  SHFT  |   Z   |   X   |   C   |   V   |   B   |     |   N   |   M    |   ,   |   .   |   /   |  ESC   |
-//                          |  NUM  |  GUI  | SHFT  |     |ArrSPC | BKSP   |  SYM  |
+//                          |Num TAB|  GUI  | SHFT  |     |ArrSPC | BKSP   |Sym SQT|
                         bindings = <
  &kp TAB         &kp Q        &kp W       &kp E      &kp R          &kp T        &kp Y       &kp U         &kp I      &kp O       &kp P          &kp BSPC
  &hm LCTRL GRAVE &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F     &lt 3 G      &kp H       &hm RGUI J    &hm RALT K &hm RCTRL L &hm RSHFT SEMI &kp SQT
@@ -117,9 +118,9 @@ combos {
                 lower_layer {
                         label = "NUMBER";
 // ---------------------------------------------------------------------------------------------------------------
-// |   TAB  | SCRSHOT | GUILBKT |  UP   | GUIRBKT | PG_UP |     |   =   |   7   |   8   |   9   |   0   |  BKSP  |
-// | CT_GRV |  SHIFT  |  LEFT   |  DOWN |  RIGHT  | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
-// |  SHIFT |  FORCE  |    .    |   :   |   SPC   | BKSP  |     |   x   |   1   |   2   |   3   |   /   |        |
+// |        | SCRSHOT | GUILBKT |  UP   | GUIRBKT | PG_UP |     |   =   |   7   |   8   |   9   |   0   |        |
+// |        |  SHIFT  |  LEFT   |  DOWN |  RIGHT  | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
+// |        |  FORCE  |    .    |   :   |   SPC   | BKSP  |     |   x   |   1   |   2   |   3   |   /   |        |
 //                              |  NUM  |   GUI   | SHFT  |     |   0   |       |   .   |
                         bindings = <
  &trans &kp LG(LS(N4))  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp PG_UP      &kp EQUAL &kp N7  &kp N8  &kp N9  &kp KP_DOT &trans
@@ -131,9 +132,9 @@ combos {
                 raise_layer {
                         label = "SYMBOL";
 // ---------------------------------------------------------------------------------------------------------
-// |   TAB  |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |  BKSP  |
-// |  CTRL  |   F1  |   F2  |   F3  |   F4  |  SYM  |     |   =   |   _   |  "|"  |   [   |   ]   |   `    |
-// |  SHFT  |   F5  |   F6  |   F7  |   F8  |   F9  |     |   +   |   -   |   \   |   {   |   }   |   ~    |
+// |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |  BKSP  |
+// |        |   F1  |   F2  |   F3  |   F4  |  SYM  |     |   =   |   _   |  "|"  |   [   |   ]   |   `    |
+// |        |   F5  |   F6  |   F7  |   F8  |   F9  |     |   +   |   -   |   \   |   {   |   }   |   ~    |
 //                          |  F10  |  F11  |  F12  |     |  SPC  |       |  SYM  |
                         bindings = <
  &trans  &kp EXCL      &kp AT       &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp BSPC
@@ -145,16 +146,30 @@ combos {
                 arrow_layer {
                         label = "ARROW";
 // ---------------------------------------------------------------------------------------------------------
-// |        | BTCLR |       |KC_SLCK|KC_PAUS| BRI_UP|     | VOL_UP| HOME  | PG_DN |  END  | PG_UP |        |
+// |        |BLUTOTH|       |KC_SLCK|KC_PAUS| BRI_UP|     | VOL_UP| HOME  | PG_DN |  END  | PG_UP |        |
 // |        | SHIFT | CTRL  |  ALT  |  GUI  | BRI_DN|     | VOL_DN| LEFT  | DOWN  | RIGHT | PG_DN |        |
-// |  BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     | KCMUTE| KC_SPC| KC_ENT| QWERTY|COLEMAK|        |
+// |        |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     | KCMUTE| KC_SPC| KC_ENT| QWERTY|COLEMAK|        |
 //                          |       |       |       |     |       |       |       |
                         bindings = <
- &trans     &bt BT_CLR   &trans       &kp SLCK     &kp PAUSE_BREAK &kp C_BRI_UP    &kp C_VOL_UP &kp HOME  &kp UP    &kp PG_UP   &kp PG_UP    &trans
+ &trans     &mo BLUTOTH  &trans       &kp SLCK     &kp PAUSE_BREAK &kp C_BRI_UP    &kp C_VOL_UP &kp HOME  &kp UP    &kp PG_UP   &kp PG_UP    &trans
  &trans     &kp LSHFT    &kp LCTRL    &kp LALT     &kp LGUI        &kp C_BRI_DN    &kp C_VOL_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp PG_DN    &trans
- &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4    &kp C_MUTE   &kp SPACE &kp RET   &tog QWERTY &tog COLEMAK &trans
+ &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4    &kp C_MUTE   &kp SPACE &kp RET   &tog QWERTY &tog COLEMAK &trans
                                       &trans       &trans          &trans          &trans       &trans    &trans
                         >;
                 };
-        };
+                lower_layer {
+                        label = "BLUTOTH";
+// -------------------------------------------------------------------------------------------------------
+// |       |       |       |  BT1  |  BT2  | BTCLR |     | BTCLR |  BT1  |  BT2  |       |       |       |
+// |       |       |       |  BT3  |  BT4  |  BT5  |     |       |  BT3  |  BT4  |  BT5  |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+//                         |       |       |       |     |       |       |       |
+                        bindings = <
+   &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans   &trans
+   &trans  &trans  &trans  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &trans      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans   &trans
+   &trans  &trans  &trans  &trans        &trans        &trans         &trans      &trans        &trans        &trans        &trans   &trans
+                           &trans        &trans        &trans         &trans      &trans        &trans
+                        >;
+                };
+       };
 };
