@@ -157,7 +157,7 @@ combos {
                                       &trans       &trans          &trans          &trans       &trans    &trans
                         >;
                 };
-                lower_layer {
+                bluet_layer {
                         label = "BLUTOTH";
 // -------------------------------------------------------------------------------------------------------
 // |       |       |       |  BT1  |  BT2  | BTCLR |     | BTCLR |  BT1  |  BT2  |       |       |       |
