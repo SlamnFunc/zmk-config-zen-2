@@ -118,10 +118,10 @@ combos {
                 lower_layer {
                         label = "NUMBER";
 // ---------------------------------------------------------------------------------------------------------------
-// |        | SCRSHOT | GUILBKT |  UP   | GUIRBKT | PG_UP |     |   =   |   7   |   8   |   9   |   0   |        |
+// |        | SCRSHOT | GUILBKT |  UP   | GUIRBKT | PG_UP |     |   =   |   7   |   8   |   9   |   .   |        |
 // |        |  SHIFT  |  LEFT   |  DOWN |  RIGHT  | PG_DN |     |   +   |   4   |   5   |   6   |   -   |        |
 // |        |  FORCE  |    .    |   :   |   SPC   | BKSP  |     |   x   |   1   |   2   |   3   |   /   |        |
-//                              |  NUM  |   GUI   | SHFT  |     |   0   |       |   .   |
+//                              |  NUM  |   GUI   | SHFT  |     |   0   |       |   :   |
                         bindings = <
  &trans &kp LG(LS(N4))  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp PG_UP      &kp EQUAL &kp N7  &kp N8  &kp N9  &kp KP_DOT &trans
  &trans &kp LSHFT       &mt LCTRL LEFT &mt LALT DOWN &mt LCMD RIGHT &kp PG_DN      &kp PLUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
